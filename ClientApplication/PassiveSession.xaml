@@ -1,0 +1,32 @@
+﻿<Window x:Class="ClientApplication.PassiveSession"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClientApplication"
+        mc:Ignorable="d"
+        Title="PassiveSession" Height="500" Width="800">
+    <Window.Background>
+        <ImageBrush ImageSource="Parking.jpg" Stretch="UniformToFill" TileMode="None" />
+    </Window.Background>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="100"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock  Grid.Row="0" Foreground="DarkOrange" Text="Your Parking history:" FontSize="40" HorizontalAlignment="Center" FontStyle="Italic" ></TextBlock>
+        <TextBox Grid.Row="1" IsReadOnly="True"  Foreground="DarkOrange" Text="Date" FontSize="35" Width="Auto" Name="Date"></TextBox>
+        <TextBox Grid.Row="2" IsReadOnly="True" Foreground="DarkOrange" Text="Parking Time" FontSize="35" Width="Auto" Name="Parking_Time"></TextBox>
+        <TextBox Grid.Row="3" IsReadOnly="True"  Foreground="DarkOrange" Text="Car Plate" FontSize="35" Width="Auto" Name="Car_Plate"></TextBox>
+        <TextBox Grid.Row="4" IsReadOnly="True" Foreground="DarkOrange" Text="Cost" FontSize="35" Width="Auto" Name="Cost"></TextBox>
+        <ListBox Grid.Row="5" Foreground="DarkOrange"  FontSize="35" Width="Auto" Name="Passive_Sessions" SelectionChanged="Passive_Sessions_SelectionChanged"></ListBox>
+        <Button Grid.Row="6" Foreground="DarkOrange" Content="Refresh" FontSize="35" Margin="0,0,0,0" Name="Refresh_Button" Click="Refresh_Button_Click"></Button>
+    </Grid>
+</Window>

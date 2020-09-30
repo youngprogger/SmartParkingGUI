@@ -1,0 +1,24 @@
+﻿<Window x:Class="ClientApplication.ClientWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClientApplication"
+        mc:Ignorable="d"
+        Title="ClientWindow" Height="450" Width="800">
+    <Window.Background>
+        <ImageBrush ImageSource="Parking.jpg" Stretch="UniformToFill" TileMode="None" />
+    </Window.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBox IsReadOnly="True" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Height="auto" Width="auto" Text="Hello, Pasha!" Name="GreetingText" FontSize="40" FontStyle="Italic"></TextBox>
+        <TextBox IsReadOnly="True" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,0,0,0" Height="Auto" Width="300" Text="ID Pasha Petrov" Name="User_ID" FontSize="30" FontStyle="Italic"></TextBox>
+        <TextBox IsReadOnly="True" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="350,0,0,0" Height="Auto" Width="400" Text="Plate Number A100aa777" Name="Car_ID" FontSize="30" FontStyle="Italic"></TextBox>
+        <Button Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="65,0,0,0" Height="Auto" Width="Auto" Content="Active Session" Name="ActiveSessionButton" Click="ActiveSessionButton_Click"  FontSize="30"></Button>
+        <Button Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,65,0" Height="Auto" Width="Auto" Content="Passive Session" Name="PassiveSessionButton" Click="PassiveSessionButton_Click"  FontSize="30"></Button>
+    </Grid>
+</Window>
